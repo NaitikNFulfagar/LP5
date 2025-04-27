@@ -58,9 +58,9 @@ cout << "Enter Pair of edges:" ;
 
 	double start = omp_get_wtime();
 	dfs(start_node);
-double end = omp_get_wtime();
+	double end = omp_get_wtime();
 
-cout << "\nExecution Time: " << (end - start) << " seconds\n";
+	cout << "\nExecution Time: " << (end - start) << " seconds\n";
 
 
 	return 0;
