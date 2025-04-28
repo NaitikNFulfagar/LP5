@@ -16,12 +16,12 @@ void bubble(int *a, int n)
 
    	 #pragma omp parallel for shared(a,first)
    	 for(  int j = first;  j < n-1;  j += 2  )
-   	   {  	 
-   		 if(  a[ j ]  >  a[ j+1 ]  )
-   		  {  	 
-     			 swap(  a[ j ],  a[ j+1 ]  );
-   		  }  	 
-   		   }  	 
+   	    { 
+   		    if(a[j] > a[j+1])
+   		    {  	 
+     			 swap(a[j],a[j+1]);
+   		    }  	 
+   	    }  	 
      }
 }
 
@@ -74,5 +74,3 @@ int main()
     cout << endl;
     return 0;
 }
-
-
