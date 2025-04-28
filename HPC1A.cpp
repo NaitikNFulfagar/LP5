@@ -80,7 +80,6 @@ void bfs(node *head)
 		qSize = q.size();
 
 		#pragma omp parallel for
-		// creates parallel threads
 		for (int i = 0; i < qSize; i++)
 		{
 			node *currNode;
@@ -91,15 +90,15 @@ void bfs(node *head)
 				q.pop();
 				cout << "\t" << currNode->data;
 
-			} // prints parent node
+			}
 
 			#pragma omp critical
 			{
-				if (currNode->left) // push parent's left node in queue
+				if (currNode->left) 
 					q.push(currNode->left);
 				if (currNode->right)
 					q.push(currNode->right);
-			} // push parent's right node in queue
+			}
 		}
 	}
 }

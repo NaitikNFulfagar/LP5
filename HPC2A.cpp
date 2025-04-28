@@ -49,12 +49,11 @@ int main()
     for(int i = 0; i < n; i++)
     {
         cin >> a[i];
-        b[i] = a[i]; // copy for sequential
+        b[i] = a[i];
     }
 
     double start, end;
 
-    // Sequential Bubble Sort
     start = omp_get_wtime();
     for(int i = 0; i < n; i++)
         for(int j = 0; j < n-i-1; j++)
@@ -63,7 +62,6 @@ int main()
     end = omp_get_wtime();
     cout << "\nSequential Bubble Sort Time: " << end - start << " seconds";
 
-    // Parallel Bubble Sort
     start = omp_get_wtime();
     bubble(a, n);
     end = omp_get_wtime();

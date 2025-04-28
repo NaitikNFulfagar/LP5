@@ -65,18 +65,16 @@ int main() {
     cout << "\nEnter elements => ";
     for (int i = 0; i < n; i++) {
         cin >> a[i];
-        b[i] = a[i];  // copy for sequential
+        b[i] = a[i];
     }
 
     double start, end;
 
-    // Sequential Merge Sort
     start = omp_get_wtime();
     mergesort_sequential(b, 0, n - 1);
     end = omp_get_wtime();
     cout << "\nSequential Merge Sort Time: " << end - start << " seconds";
 
-    // Parallel Merge Sort
     start = omp_get_wtime();
     mergesort_parallel(a, 0, n - 1);
     end = omp_get_wtime();

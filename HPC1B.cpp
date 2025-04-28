@@ -39,14 +39,12 @@ int main() {
 	int n, m, start_node;
 	cout << "Enter No of Node,Edges,and start node:" ;
 	cin >> n >> m >> start_node;
-         //n: node,m:edges
          
 cout << "Enter Pair of edges:" ;
 	for (int i = 0; i < m; i++) {
     	int u, v;
     		
     	cin >> u >> v;
-//u and v: Pair of edges
     	graph[u].push_back(v);
     	graph[v].push_back(u);
 	}
