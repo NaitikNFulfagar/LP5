@@ -19,7 +19,6 @@ class Breadthfs
 };
 
 node *insert(node *root, int data)
-// inserts a node in tree
 {
 	if (!root)
 	{
